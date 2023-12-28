@@ -25,6 +25,21 @@ async def root():
 3. GET 메소드의 "/" 경로로 동작할 것이라고 설정하고,
 4. 요청을 하면 Hello World로 반환한다.
 
-# 와!!! 기본적으로 swagger가 있어요
+## 와!!! 기본적으로 swagger가 있어요
 
 따로 무슨 설정을 할 필요없이 API 문서를 "/docs"에서 확인할 수 있습니다.
+
+## 파라미터 받아오기
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def root(item_id: int):
+    return {"item_id": f"{item_id}"}
+```
+
+대괄호를 사용해서 변수를 받아올 수도 있습니다.
