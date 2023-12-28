@@ -9,7 +9,7 @@ export default function Home() {
             <Link key="/posts" href="/posts" className="text-sm duration-200 text-zinc-500 hover:text-zinc-300">
               Posts
             </Link>
-            <Link key="/contact" href="/contact" className="text-sm duration-200 text-zinc-500 hover:text-zinc-300">
+            <Link key="/about" href="/about" className="text-sm duration-200 text-zinc-500 hover:text-zinc-300">
               About
             </Link>
         </ul>
