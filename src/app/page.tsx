@@ -19,7 +19,7 @@ export default function Home() {
         className="absolute inset-0 -z-50 animate-fade-in"
         quantity={70}
       />
-      <h1 className="z-10 text-4xl text-transparent duration-500 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text pb-4">
+      <h1 className="z-10 text-4xl text-transparent duration-500 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text pb-4 font-bold">
         enbraining
       </h1>
 
