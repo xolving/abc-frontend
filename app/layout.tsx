@@ -13,30 +13,8 @@ export const metadata: Metadata = {
       "Hello, I'm enbraining",
     url: "https://enbraining.com",
     siteName: "enbraining.com",
-    images: [
-      {
-        url: "https://enbraining.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
     locale: "en-US",
     type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: "enbraining",
-    card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
