@@ -5,8 +5,8 @@ import { Analytics } from "../components/analytics";
 import "./global.css";
 
 export const metadata: Metadata = {
-  title: "enbraining",
-  description: "Hello, I'm enbraining",
+  title: "roadmap",
+  description: "다양한 로드맵에 대해서 확인할 수 있습니다.",
   icons: {
     shortcut: "/favicon.png",
   },
