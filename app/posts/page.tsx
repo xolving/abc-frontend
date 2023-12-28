@@ -1,5 +1,5 @@
 import { Redis } from "@upstash/redis";
-import { allProjects } from "contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
 import { Card } from "../components/card";
 import { Navigation } from "../components/nav";
@@ -9,17 +9,17 @@ export const revalidate = 0;
 
 const redis = Redis.fromEnv()
 
-export default async function ProjectsPage() {
-  const featured = allProjects.find((project) => project.slug === "README")!;
-  const top2 = allProjects.find((project) => project.slug === "utility")!;
-  const top3 = allProjects.find((project) => project.slug === "todora")!;
-  const sorted = allProjects
+export default async function postsPage() {
+  const featured = allPosts.find((post) => post.slug === "README")!;
+  const top2 = allPosts.find((post) => post.slug === "utility")!;
+  const top3 = allPosts.find((post) => post.slug === "todora")!;
+  const sorted = allPosts
     .filter((p) => p.published)
     .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
+      (post) =>
+        post.slug !== featured.slug &&
+        post.slug !== top2.slug &&
+        post.slug !== top3.slug,
     )
     .sort(
       (a, b) =>
@@ -75,9 +75,9 @@ export default async function ProjectsPage() {
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project) => (
-              <Card key={project.slug}>
-                <Article project={project} views={0} />
+            {[top2, top3].map((post) => (
+              <Card key={post.slug}>
+                <Article post={post} views={0} />
               </Card>
             ))}
           </div>
@@ -88,27 +88,27 @@ export default async function ProjectsPage() {
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 0)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0} />
+              .map((post) => (
+                <Card key={post.slug}>
+                  <Article post={post} views={0} />
                 </Card>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 1)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0} />
+              .map((post) => (
+                <Card key={post.slug}>
+                  <Article post={post} views={0} />
                 </Card>
               ))}
           </div>
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 2)
-              .map((project) => (
-                <Card key={project.slug}>
-                  <Article project={project} views={0} />
+              .map((post) => (
+                <Card key={post.slug}>
+                  <Article post={post} views={0} />
                 </Card>
               ))}
           </div>
