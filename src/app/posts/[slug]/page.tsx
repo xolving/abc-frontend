@@ -1,5 +1,4 @@
 import { Mdx } from "@/src/components/mdx";
-import { Redis } from "@upstash/redis";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Header } from "./header";
@@ -13,8 +12,6 @@ type Props = {
     slug: string;
   };
 };
-
-const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
   return allPosts
@@ -32,12 +29,9 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 
-  const views =
-    (await redis.get<number>(["pageviews", "posts", slug].join(":"))) ?? 0;
-
   return (
     <div className="bg-zinc-50 min-h-screen">
-      <Header project={project} views={views} />
+      <Header project={project} views={0} />
       <ReportView slug={project.slug} />
 
       <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
