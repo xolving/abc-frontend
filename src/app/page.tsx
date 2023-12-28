@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Particles from "./components/particles";
+import Particles from "../components/particles";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
               Posts
             </Link>
             <Link key="/contact" href="/contact" className="text-sm duration-200 text-zinc-500 hover:text-zinc-300">
-              Contact
+              About
             </Link>
         </ul>
       </nav>

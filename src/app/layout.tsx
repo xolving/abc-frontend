@@ -1,7 +1,7 @@
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import { Analytics } from "../components/analytics";
 import "./global.css";
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
+  src: "../../public/fonts/PretendardVariable.woff2",
+  variable: "--font-calSans",
 });
 
 export default function RootLayout({

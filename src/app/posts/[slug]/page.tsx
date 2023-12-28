@@ -1,4 +1,4 @@
-import { Mdx } from "@/app/components/mdx";
+import { Mdx } from "@/src/components/mdx";
 import { Redis } from "@upstash/redis";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";

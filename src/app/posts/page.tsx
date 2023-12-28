@@ -1,8 +1,8 @@
 import { Redis } from "@upstash/redis";
 import { allPosts } from "contentlayer/generated";
 import Link from "next/link";
-import { Card } from "../components/card";
-import { Navigation } from "../components/nav";
+import { Card } from "../../components/card";
+import { Navigation } from "../../components/nav";
 import { Article } from "./article";
 
 export const revalidate = 0;
