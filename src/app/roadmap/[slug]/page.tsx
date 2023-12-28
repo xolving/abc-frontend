@@ -1,5 +1,5 @@
 import { Mdx } from "@/src/components/mdx";
-import { allPosts } from "contentlayer/generated";
+import { allRoadmaps } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Header } from "./header";
 import "./mdx.css";
@@ -14,7 +14,7 @@ type Props = {
 };
 
 export async function generateStaticParams(): Promise<Props["params"][]> {
-  return allPosts
+  return allRoadmaps
     .filter((p) => p.published)
     .map((p) => ({
       slug: p.slug,
@@ -23,7 +23,7 @@ export async function generateStaticParams(): Promise<Props["params"][]> {
 
 export default async function PostPage({ params }: Props) {
   const slug = params?.slug;
-  const project = allPosts.find((project) => project.slug === slug);
+  const project = allRoadmaps.find((project) => project.slug === slug);
 
   if (!project) {
     notFound();
