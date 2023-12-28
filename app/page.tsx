@@ -6,7 +6,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-16 animate-fade-in">
         <ul className="flex items-center justify-center gap-4">
-            <Link key="/projects" href="/projects" className="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
+            <Link key="/posts" href="/posts" className="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
               Posts
             </Link>
             <Link key="/contact" href="/contact" className="text-sm duration-500 text-zinc-500 hover:text-zinc-300">
