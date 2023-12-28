@@ -7,15 +7,6 @@ import "./global.css";
 export const metadata: Metadata = {
   title: "enbraining",
   description: "Hello, I'm enbraining",
-  openGraph: {
-    title: "enbraining.com",
-    description:
-      "Hello, I'm enbraining",
-    url: "https://enbraining.com",
-    siteName: "enbraining.com",
-    locale: "en-US",
-    type: "website",
-  },
   icons: {
     shortcut: "/favicon.png",
   },
